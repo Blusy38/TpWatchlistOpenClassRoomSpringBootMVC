@@ -1,0 +1,39 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header :: head"></head>
+<body>
+	<div class="container">
+		<div th:replace="menu :: menu">...</div>
+		<h2 class="mt-4">Choose the correct one</h2>
+		<hr />
+		<div class="float-sm-right">
+			<a href="#" class="btn btn-light btn-sm" role="button" th:href="@{/watchlistForm(id=${#request.getParameter('id')})}">Can't find it ?</a>
+		</div>
+		<table class="table">
+			<thead class="thead-light">
+				<tr>
+					<th class="text-left"></th>
+					<th class="text-left">Title</th>
+					<th class="text-left">Year</th>
+					<th class="text-left">Type</th>
+					<th class="text-left">Action</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="watchlistSearch : ${watchlistSearch}">
+					<td><div th:if="${watchlistSearch.Poster != 'N/A'}">
+							<img th:src="${watchlistSearch.Poster}" height="70" />
+						</div></td>
+					<td th:text="${watchlistSearch.Title}"></td>
+					<td th:text="${watchlistSearch.Year}"></td>
+					<td th:text="${watchlistSearch.Type}"></td>
+					<td><a href="#" class="btn btn-info" role="button"
+						th:href="@{getList(id=${#request.getParameter('id')},imdbID=${watchlistSearch.imdbID})}">Choose
+							it</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+	</div>
+</body>
+</html>

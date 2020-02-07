@@ -1,0 +1,47 @@
+<<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header :: head"></head>
+<body>
+	<div class="container">
+		<div th:replace="menu :: menu">...</div>
+		<h2 th:text="${{watchlistItem.title}}">Movie Title</h2>
+		<hr />
+		<div class="float-sm-right"><a href="#" class="btn btn-light btn-sm" role="button" th:href="@{/getList(id=${{watchlistItem.id}})}" >Wrong <span th:text="${{watchlistItem.type}}">movie</span>?</a></div>
+		<div class="row">
+        <div class="col-md-auto">
+			<img th:src="${{watchlistItem.poster}}" />
+		</div>
+        <div class="col">
+			<h3>Informations</h3>
+			<ul>
+				<li>Released : <span th:text="${{watchlistItem.released}}">Releaseddate</span></li>
+				<li>Rating : <span th:text="${{watchlistItem.rating}}">rating</span></li>
+				<li>Genre : <span th:text="${{watchlistItem.genre}}">genre</span></li>
+				<li>Actors : <span th:text="${{watchlistItem.actors}}">actors</span></li>
+				<li>Type : <span th:text="${{watchlistItem.type}}">type</span></li>
+				<li>Total Seasons : <span
+					th:text="${{watchlistItem.totalSeasons}}">totalSeasons</span></li>
+				<li>Runtime : <span th:text="${{watchlistItem.runtime}}">runtime</span></li>
+			</ul>
+			<div>
+				<h4 class="alert-heading">About</h4>
+				<div th:text="${{watchlistItem.comment}}">content.</div>
+				<hr>
+						<div class="float-sm-right"><a href="#" class="btn btn-light btn-sm" role="button" th:href="@{/watchlistSheet(id=${{watchlistItem.id}},imdbID=${{watchlistItem.imdbID}})}">Delete this <span th:text="${{watchlistItem.type}}">movie</span> ?</a></div>
+				
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+		
+	</script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+		
+	</script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+html, body {
+	height: 100%;
+}
+.module {
+  width: 250px;
+  overflow: hidden;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+.title {
+	margin-bottom: 0px;
+}
+
+.titreIngredient {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.titreCommentaire {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-weight: bold;
+	background-color: #ffffff0f;
+	padding-left: 10px;
+}
+
+.checked {
+	color: orange;
+}
+
+.primaryBtn {
+	justify-content: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0 1rem;
+	color: white;
+	text-decoration: none;
+	background-color: #333534;
+	border: 2px solid #333534;
+	line-height: 2rem;
+	border-radius: 2rem;
+	font-size: 1rem;
+	text-overflow: ellipsis;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+}
+
+.submitBtn {
+	color: #333534 !important;
+	background-color: #bfbfbf;
+	cursor: pointer;
+	margin-top: 10px;
+	border: none;
+	border-radius: 10px;
+	height: 32px;
+	font-size: 14px;
+	outline: medium none;
+	padding: 0 10px !important;
+	margin-bottom: 10px !important;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+}
+
+.inputChamp {
+	background-color: #f6f6f6;
+	border: 1px solid #E4E3E3;
+	border-radius: 10px;
+	height: 32px;
+	width: 300px;
+	color: #69676a;
+	font-size: 14px;
+	outline: medium none;
+	padding: 0 10px !important;
+	margin-bottom: 10px !important;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+}
+
+.inputTextArea {
+	font-size: 1rem;
+	border-radius: 4px;
+	padding: 12px;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+}
+
+.select {
+	background-color: #f6f6f6;
+	border-radius: 10px;
+	height: 32px;
+	width: 300px;
+	color: #69676a;
+	font-size: 14px;
+	padding: 0 10px !important;
+	margin-bottom: 10px !important;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+}
+
+.divCommentaire {
+	border: 2px solid;
+	background-color: #bfbfbf;
+	margin-bottom: 5px;
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+#inscription {
+	width: 97%;
+	border: 1px solid;
+	padding: 8px;
+	background: #333534;
+}
+
+#header {
+	display: block;
+}
+
+#loginBar {
+	display: block;
+	padding: 5px 20px;
+	width: auto;
+	margin: auto;
+}
+
+#loginBar .login {
+	display: block;
+	float: right;
+}
+
+#global {
+	display: block;
+	clear: both;
+	min-height: auto;
+	background: #333534;
+	width: 90%;
+	margin: auto; /* Permet de centrer la div */
+	text-align: left;
+	padding: 0px 10px;
+}
+
+#contenu {
+	margin-bottom: 30px;
+}
+
+#titreBlog, #piedBlog {
+	text-align: center;
+}
+
+#categorie {
+	margin: 1rem 0;
+	text-align: center;
+	box-shadow: none;
+	border-top: 1px solid #ddd;
+}
+
+#categorie ul li {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+}
+
+#categorie ul li a {
+	display: inline-block;
+	color: #000000;
+	line-height: 48px;
+	cursor: pointer;
+	text-decoration: none;
+	margin: 0 12px;
+}
+
+#categorie li.selected a {
+	border-bottom: 4px solid #333534;
+}
+
+#txtCommentaire {
+	width: 75%;
+}
+
+#contenuCommentaire {
+	height: 52px;
+	padding-left: 10px;
+}
+
+#infoCommentaire {
+	background-color: #888888;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#erreur {
+	display: grid;
+	color: red;
+	font-weight: bolder;
+}
+
+#leftframe {
+	float: left;
+	width: min-content;
+	padding-right: 30px;
+	min-height: 265px;
+}
+
+#rightframe {
+	min-height: 265px;
+}
+
+.w {
+	overflow: hidden;
+	width: 105%;
+	margin: 0 auto;
+}
+
+section {
+	/* margin: -1%;*/
+	padding-top: 10px;
+}
+
+section div#cadre {
+	background: #bfbfbf;
+	float: left;
+	height: 35vw;
+	margin: 1%;
+	width: 28%;
+	border: 1px solid;
+	padding: 0px 10px;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+	section div#cadre {
+	height: 385px;
+	}
+	.w {
+    width: 103%;
+}
+}
+
+article {
+	background: #bfbfbf;
+	border: 1px solid;
+	padding: 10px;
+	margin: 10px 0px;
+}
